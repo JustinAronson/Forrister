@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- 
+      This is an HTML comment
+      You can write text in a comment and the content won't be visible in the page
+    -->
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- <link rel="icon" href="https://glitch.com/favicon.ico" /> -->
+
+    <!-- The website stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+    
+    
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+	
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14"></script>
+    <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@cb0bb8407968be713b79008548b7044908ba5729/dist/aframe-master.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-physics-system@v4.2.2/dist/aframe-physics-system.min.js"></script>
+
+    <script src="utilities.js" defer></script>
+    
+    <!-- Avatar management, including Vue/Aframe -->
+    <script src="avatar.js" defer></script>
+    
+    <!-- Firebase stuff -->
+    <script src="io.js" defer></script>
+    
+     <!-- An example of using a class to create advanced AFrame geometry  -->
+    <script src="generative-terrain.js" defer></script>
+
+    <!-- The main app and  -->
+    <script src="script.js" defer></script>
+
+    <script src="aframe-particle-system-component.js"> </script>
+    <script src="aframe-fire-component.js"> </script>
+    <script src="aframe-sky_shader-component.js"></script>
+<!--     <script src="aframe-effects.js"></script> -->
+<!--     <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script> -->
+
+    <script src="room-forest.js" defer></script>
+  </head>
+ 
+  <body>
+    <a-scene physics>
+      <a-assets>
+        <!-- ASSETS GO HERE -->
+        <!-- COPY THEM INTO GLITCH "ASSETS", THEN PASTE THE URLS HERE -->
+        <!-- THEN USE THEM IN YOUR OBJECTS -->
+        
+        <a-asset-item
+          id="wizardhat"
+          src="https://cdn.glitch.global/98591d90-151d-426b-a4d2-e73cd6614d72/Wizard%20hat.glb?v=1684958932603"
+        ></a-asset-item>
+        
+         <a-asset-item
+          id="piano"
+          src="https://cdn.glitch.global/98591d90-151d-426b-a4d2-e73cd6614d72/Piano.glb?v=1684966815181"
+        ></a-asset-item>  
+      
+        <img
+          id="nightsky"
+          src="https://cdn.glitch.global/98591d90-151d-426b-a4d2-e73cd6614d72/digital_painting_a_dark_starry_night.jpg?v=1684959087717"
+        />
+        
+        <a-asset-item
+          id="Top Hat"
+          src="https://cdn.glitch.global/1db7bd29-88b9-4cd9-8a14-6233cdf14f19/voxel_top_hat.glb?v=1685419035563"
+        ></a-asset-item>
+        <a-asset-item
+          id= "Santa Hat"
+                      src="https://cdn.glitch.global/1db7bd29-88b9-4cd9-8a14-6233cdf14f19/santa_hat.glb?v=1685423748512"></a-asset-item>
+        <a-asset-item
+          id="Cowboy Hat"
+          src="https://cdn.glitch.global/1db7bd29-88b9-4cd9-8a14-6233cdf14f19/low_poly_hat.glb?v=1685419811488"
+        ></a-asset-item>
+        <a-asset-item
+          id="hut"
+          src="https://cdn.glitch.global/1db7bd29-88b9-4cd9-8a14-6233cdf14f19/stylised_medieval_buildings_-_woodcutter_hut.glb?v=1685465197570"
+        ></a-asset-item>
+        <a-asset-item
+          id="Beanie"
+          src="https://cdn.glitch.global/1db7bd29-88b9-4cd9-8a14-6233cdf14f19/winter_hat.glb?v=1685419818732"
+        ></a-asset-item>
+        
+        <a-asset-item
+          id="campfire"
+          src="https://cdn.glitch.global/1db7bd29-88b9-4cd9-8a14-6233cdf14f19/low_poly_campfire.glb?v=1685299487101"
+        ></a-asset-item>  
+        
+        <a-asset-item
+          id="tree1"
+          src="https://cdn.glitch.global/1db7bd29-88b9-4cd9-8a14-6233cdf14f19/giant_low_poly_tree.glb?v=1685237498181"
+        ></a-asset-item>  
+        <a-asset-item
+          id="tree2"
+          src="https://cdn.glitch.global/1db7bd29-88b9-4cd9-8a14-6233cdf14f19/low_poly_tree_concept.glb?v=1685237500734"
+        ></a-asset-item>  
+        <a-asset-item
+          id="tree3"
+          src="https://cdn.glitch.global/1db7bd29-88b9-4cd9-8a14-6233cdf14f19/low_poly_tree.glb?v=1685237503337"
+        ></a-asset-item>  
+        <a-asset-item
+          id="tree4"
+          src="https://cdn.glitch.global/1db7bd29-88b9-4cd9-8a14-6233cdf14f19/spruce_tree_-_low_poly.glb?v=1685237505987"
+        ></a-asset-item>  
+        <a-asset-item
+          id="waterBucket"
+          src="https://cdn.glitch.global/1db7bd29-88b9-4cd9-8a14-6233cdf14f19/wooden_water_bucket.glb?v=1685310926734"
+        ></a-asset-item>  
+        <a-asset-item
+          id="quenchSound"
+          src="https://cdn.glitch.global/1db7bd29-88b9-4cd9-8a14-6233cdf14f19/FIRESizz_Quenching%20cooling%204%20(ID%201697)_BSB.mp3?v=1685311522110"
+        ></a-asset-item>
+        
+        <a-asset-item
+          id="umbrella"
+          src="https://cdn.glitch.global/1db7bd29-88b9-4cd9-8a14-6233cdf14f19/umbrella.glb?v=1685472169624"
+        ></a-asset-item>
+        
+        
+        
+        
+      </a-assets>
+
+      <!-- Scene handled by Vue   -->
+      <a-entity id="scene"></a-entity>
+    </a-scene>
+  
+    <!-- Controls handled by Vue   -->
+    <div id="controls"></div>
+  </body>
+</html>
