@@ -1,6 +1,6 @@
 /*global uuidv4 firebase Avatar THREE Vue settings Terrain shuffleArray getRandom */
 
-// Your web app's Firebase configuration
+// Your web app's Firebase configuration. ADD YOUR OWN TO ACCESS MULTIPLAYER
 const firebaseConfig = {
   apiKey: "AIzaSyANpaOidVRpCPGxB9Fd-wUXoF5KAzo3GeE",
   authDomain: "arvr-a6-5f585.firebaseapp.com",
